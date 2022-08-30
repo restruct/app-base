@@ -25,14 +25,16 @@
     "restruct/silverstripe-login-branding": "^0.1.0",
     "restruct/silverstripe-admintweaks": "^2"
   },
-  "optional_requirements": {
+  "frequent_requirements": {
+    "restruct/silverstripe-shortcodable": "^4.0.7",
     "restruct/silverstripe-blockbase": "^1",
     "dnadesign/silverstripe-elemental": "^4.5",
     "dnadesign/silverstripe-elemental-virtual": "^1.2",
-    "restruct/silverstripe-shortcodable": "^4.0.7",
+    "symbiote/silverstripe-queuedjobs": "^4.8.0"
+  },
+  "optional_requirements": {
     "silverstripe/userforms": "^5",
     "unclecheese/display-logic": "^2.0.3",
-    "symbiote/silverstripe-queuedjobs": "^4.8.0",
     "symbiote/silverstripe-multivaluefield": "^5.0.2",
     "symbiote/silverstripe-gridfieldextensions": "^3.2.4",
     "undefinedoffset/sortablegridfield": "^2.0.9",
@@ -52,9 +54,7 @@
   },
   "extra": {
     "expose": [
-      "app/client",
-      "admintweaks/client",
-      "a-cookiebar/client"
+      "app/client"
     ],
     "resources-dir": "_resources"
   },
