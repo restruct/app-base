@@ -1,0 +1,13 @@
+---
+name: goflex_shortcodes
+Only:
+  classexists: Shortcodable\Shortcodable
+---
+Shortcodable\Shortcodable:
+#  default_placeholder_bg: fed342
+#  default_placeholder_txtclr: '000000'
+#  default_placeholder_font: 'blender, Courier, Arial'
+#  default_placeholder_fontsize: 42
+  shortcodable_classes:
+    - sc_iframe
+    - Restruct\Goflex\Shortcodes\PartnerLogosShortcode

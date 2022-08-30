@@ -1,0 +1,21 @@
+---
+Name: app-blocks
+---
+Restruct\Silverstripe\BlockBase\Blocks\BlockContent:
+  has_heading: true
+  has_introline: true
+  has_image: true
+  has_content: true
+  has_bg_image: true
+  styles:
+    single-col-wide: 'Enkele brede kolom'
+    single-col-narrow: 'Enkele smalle kolom'
+    two-cols-img-txt: 'Beeld links/tekst rechts'
+    two-cols-txt-img: 'Tekst links/beeld rechts'
+  style_options:
+    bg-none: 'Geen achtergrondkleur (transparant)'
+    bg-primary-light: 'Achtergrond hoofdkleur (licht)'
+    bg-primary-dark: 'Achtergrond hoofdkleur (donker)'
+    bg-secondary-light: 'Achtergrond accentkleur (licht)'
+    bg-secondary-dark: 'Achtergrond accentkleur (donker)'
+

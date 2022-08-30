@@ -1,0 +1,13 @@
+// NOTE: fonts.scss gets included in main, editor & cms but also an isolated fonts.css file may get generated to allow for remote inclusion
+
+////@import url("https://fast.fonts.net/lt/1.css?apiType=css&c=XXX-XXX-XXXX-etc&fontids=XXXXXXX");
+//// NOTE: above font-license counter request delays the chain (100+ ms) -- move to html head template, async-ish instead:
+//// <%-- 'async' call to myfonts api (https://www.filamentgroup.com/lab/load-css-simpler/) --%>
+//// <link href="https://fast.fonts.net/lt/1.css?etc" rel="stylesheet" media="print" onload="this.media='all'; this.onload=null;">
+
+//@font-face{
+//	font-family:"SomeSpecificFont";
+//	src:url("../fonts/SomeSpecificFont.eot etc");
+//    font-weight: normal;
+//    font-style: normal;
+//}

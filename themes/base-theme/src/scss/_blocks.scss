@@ -1,0 +1,15 @@
+@import "mixins";
+
+// General BlockHolder.ss structure:
+.block-outer {
+  .block-holder {
+    .block.block-wrapper {
+
+      // Specific Block(ClassNameShort).ss structure:
+      .block-item.block-item_BlockClassNameShort {
+        // then maybe a .container-fluid .row etc...
+      }
+
+    }
+  }
+}

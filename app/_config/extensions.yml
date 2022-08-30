@@ -1,0 +1,9 @@
+---
+Name: app-extensions
+---
+#App\Model\Page:
+#  extensions:
+#    - App\Extensions\Pages\PageExtension
+#SilverStripe\SiteConfig\SiteConfig:
+#  extensions:
+#    - Restruct\AppBase\Extensions\SiteConfigExtension

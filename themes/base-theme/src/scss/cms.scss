@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+// Make fonts available in CMS as well
+@import 'fonts';
+
+// Optionally correct font (size) for styles dropdown in TinyMCE
+.mce-menu-sub .mce-text {
+  //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  //font-size: 80%;
+}

@@ -1,0 +1,41 @@
+---
+Name: app-admin
+---
+SilverStripe\Admin\LeftAndMain:
+  #  help_link: 'http://help-url.tld/'
+  #  extra_requirements_javascript:
+  #    - 'restruct/silverstripe-namedlinkfield:client/dist/js/bundle.js'
+  extra_requirements_css:
+    - 'app/client/dist/css/app-cms-tweaks.css'
+
+#SilverStripe\Forms\HTMLEditor\HTMLEditorField:
+#  use_gzip: false
+
+##Change the order of some menu-items
+#SilverStripe\Reports\ReportAdmin:
+#  menu_priority: -0.6
+#Symbiote\QueuedJobs\Controllers\QueuedJobsAdmin:
+#  menu_priority: -1
+
+
+# Login forms/app branding
+---
+Name: app-branding
+---
+Restruct\SilverStripe\AdminBranding\SecurityBrandingExtension:
+  built_by: 'Developed by <a href="https://restruct.nl" target="_blank">Restruct web & apps</a>'
+#  powered_by: 'Powered by <a href="https://silverstripe.org" target="_blank">Silverstripe</a>'
+  include_icon: true
+
+# Include client logo by placing AppBrand.ss template in:
+# - [app]/templates/[Includes/]
+# - themes/[client-theme]/templates/[Includes/]
+# - themes/app-login/templates/[Includes/]
+---
+Name: app-login
+Before:
+  - '#login-forms'
+---
+SilverStripe\LoginForms\EnablerExtension:
+  login_themes:
+    - 'app-login'

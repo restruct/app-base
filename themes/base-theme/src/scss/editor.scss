@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+// Bootstrap required parts:
+@import "bs-required-parts";
+
+// Custom theme styles:
+@import 'mixins';
+@import 'fonts';
+@import 'typography';
+
+//
+// General WYSIWYM styling (TinyMCE iframe body has id="tinymce" & class="mce-content-body typography")
+//
+body.mce-content-body {
+
+  padding: .8rem;
+
+  // Optional WYSIWYM style from admintweaks
+	@import "../../../../vendor/restruct/silverstripe-admintweaks/client/src/scss/editor-base-typography";
+	//@import "../../admintweaks/client/src/scss/editor-base-typography";
+  $wysiwym_layout: false !default;
+  @if $wysiwym_layout {
+    @include editor-wysiwym-layout;
+  }
+
+  p.hidden {
+    display: block;
+    margin: 4px;
+    border: 1px dashed #999;
+    background: #eee;
+    color: #999;
+    padding: 20px;
+    border-radius: 4px;
+
+    &:before {
+      content: "(hidden:) ";
+      font-size: 10px;
+    }
+  }
+
+  //td {
+  //  color: inherit;
+  //  font-family: inherit;
+  //  font-size: inherit;
+  //  font-weight: inherit;
+  //}
+
+}

@@ -1,0 +1,47 @@
+//
+// Styling 'shared' between main/layout & editor.css
+//
+
+// Bootstrap required parts:
+@import "bs-required-parts";
+
+// + Bootstrap typography parts...
+@import "~bootstrap/scss/type"; // in _typography
+@import "~bootstrap/scss/tables"; // in _typography
+@import "~bootstrap/scss/buttons"; // in _typography
+@import "~bootstrap/scss/badge"; // in _typography
+@import "~bootstrap/scss/alert"; // in _typography
+
+
+//
+// GENERAL TWEAKS
+//
+//@import "../../admintweaks/client/src/scss/editor-base-typography";
+@import "../../../../vendor/restruct/silverstripe-admintweaks/client/src/scss/editor-base-typography";
+.typography {
+	@include editor-base-typography-styles;
+}
+
+
+//
+// SPECIFIC TWEAKS/TYPOGRAPHY STYLES
+//
+@import "mixins";
+// ... typography styles
+
+
+////
+//// TWEAK FONT SIZES FOR SMALL SCREENS
+////
+//@include media-breakpoint-down(sm) {
+//	body, .input-group, .form-control, .btn {
+//		@include font-size($font-size-sm);
+//	}
+//	h1, .h1 { @include font-size($h1-font-size * .6); }
+//	h2, .h2 { @include font-size($h2-font-size * .8); }
+//	h3, .h3 { @include font-size($h3-font-size * .8); }
+//	h4, .h4 { @include font-size($h4-font-size * .8); }
+//	h5, .h5 { @include font-size($h5-font-size * .8); }
+//	h6, .h6 { @include font-size($h6-font-size * .8); }
+//	p.intro, p.lead { @include font-size($font-size-sm * 1.15); }
+//}

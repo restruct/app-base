@@ -1,0 +1,24 @@
+{
+  "name": "restruct/sub-theme",
+	"description": "Restruct starter subtheme of base theme",
+	"type": "silverstripe-theme",
+  "keywords": [
+    "silverstripe",
+    "theme"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "restruct.nl",
+      "homepage": "https://www.restruct.nl"
+    }
+  ],
+  "require": {
+    "composer/installers": "*"
+  },
+  "extra": {
+    "expose": [
+      "dist"
+    ]
+  }
+}

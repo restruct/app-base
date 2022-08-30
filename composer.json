@@ -1,0 +1,79 @@
+{
+  "name": "restruct/app-base",
+  "require": {
+    "php": "^7.1 || ^8.0",
+    "ext-openssl": "*",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "silverstripe/asset-admin": "^1",
+    "silverstripe/assets": "^1",
+    "silverstripe/cms": "^4",
+    "silverstripe/config": "^1",
+    "silverstripe/framework": "^4",
+    "silverstripe/login-forms": "^4",
+    "silverstripe/mimevalidator": "^2",
+    "silverstripe/redirectedurls": "^2",
+    "silverstripe/subsites": "^2",
+    "symbiote/silverstripe-gridfieldextensions": "^3",
+    "symbiote/silverstripe-grouped-cms-menu": "^4",
+    "bigfork/silverstripe-sentry-handler": "^1",
+    "kinglozzer/metatitle": "^2",
+    "bigfork/silverstripe-simpleseo": "^2",
+    "wilr/silverstripe-googlesitemaps": "^2",
+    "jonom/silverstripe-betternavigator": "^5.3",
+    "restruct/silverstripe-cookiebar": "^2.0",
+    "restruct/silverstripe-login-branding": "^0.1.0",
+    "restruct/silverstripe-admintweaks": "^2"
+  },
+  "optional_requirements": {
+    "restruct/silverstripe-blockbase": "^1",
+    "dnadesign/silverstripe-elemental": "^4.5",
+    "dnadesign/silverstripe-elemental-virtual": "^1.2",
+    "restruct/silverstripe-shortcodable": "^4.0.7",
+    "silverstripe/userforms": "^5",
+    "unclecheese/display-logic": "^2.0.3",
+    "symbiote/silverstripe-queuedjobs": "^4.8.0",
+    "symbiote/silverstripe-multivaluefield": "^5.0.2",
+    "symbiote/silverstripe-gridfieldextensions": "^3.2.4",
+    "undefinedoffset/sortablegridfield": "^2.0.9",
+    "restruct/silverstripe-featuredimages": "^3.1.4",
+    "restruct/silverstripe-focuspointcropper": "^2.0.0",
+    "webmen/silverstripe-webp-images": "^0.3.0",
+    "micschk/silverstripe-gridfieldpages": "^2.0.1",
+    "restruct/silverstripe-newsgrid": "dev-master",
+    "restruct/silverstripe-filterablearchive": "dev-master",
+    "restruct/silverstripe-latlongfield": "^1.0",
+    "restruct/silverstripe-copybutton": "^2.0.0",
+    "restruct/silverstripe-namedlinkfield": "^2.1.0",
+    "dnadesign/silverstripe-elemental-textcontentforsearch": "dev-master"
+  },
+  "optional_sans-cms_requirements": {
+    "bigfork/silverstripe-fail-whale": "^0"
+  },
+  "extra": {
+    "expose": [
+      "app/client",
+      "admintweaks/client",
+      "a-cookiebar/client"
+    ],
+    "resources-dir": "_resources"
+  },
+  "autoload": {
+    "_deact_files": [
+      "app/src/bootstrap.php"
+    ],
+    "psr-4": {
+      "Restruct\\AppBase\\": "app/src"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "process-timeout": 600,
+    "allow-plugins": {
+      "composer/installers": true,
+      "silverstripe/recipe-plugin": true,
+      "silverstripe/vendor-plugin": true
+    }
+  }
+}

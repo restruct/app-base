@@ -1,0 +1,24 @@
+---
+Name: app-subsites
+---
+
+# THEMES
+# Define custom cascading theme lists for CMS users to choose as theme options for subsites
+# Optionally limit subsite-themes: Subsite::set_allowed_themes(array('blackcandy','mytheme'));
+SilverStripe\Subsites\Service\ThemeResolver:
+  theme_options:
+#    normal:
+#      - '$public'
+#      - 'watea'
+#      - 'starter'
+#      - '$default'
+    Behandeling-theme:
+      - '$public'
+#      - 'behandeling-theme'
+      - 'sub-theme'
+      - 'base-theme'
+      - '$default'
+
+# ADMIN AREAS
+# To enable an admin area for subsites, see: https://github.com/silverstripe/silverstripe-subsites#enable-menu-support-for-custom-areas-in-subsites
+# (Oh, and: https://github.com/silverstripe/silverstripe-subsites#enable-subsite-support-on-dataobjects)

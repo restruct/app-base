@@ -1,0 +1,27 @@
+---
+Name: app-themes
+---
+SilverStripe\View\SSViewer:
+  rewrite_hash_links: true
+  # Cascading themes & module priority: https://docs.silverstripe.org/en/4/developer_guides/templates/template_inheritance/#cascading-themes
+  # $-prefixed refers to a set of themes ($default = module roots with a templates dir, $public = assets in public/ dir)
+  # See ThemeList: vendor/silverstripe/framework/src/View/ThemeList.php
+  themes:
+    - '$public'
+    - 'base-theme'
+    - '$default'
+
+SilverStripe\Forms\HTMLEditor\TinyMCEConfig:
+  # silverstripe/admin:client/etc not supported for themes (just for modules)
+  editor_css:
+    - 'themes/base-theme/dist/css/editor.css'
+  image_size_presets:
+    - name: widesize
+      i18n: SilverStripe\Forms\HTMLEditor\TinyMCEConfig.WIDE_SIZE
+      text: Wide size
+      width: 900
+
+# Optionally include an admin-wide stylesheet from the theme directory
+SilverStripe\Admin\LeftAndMain:
+  extra_requirements_css:
+    - 'themes/base-theme/dist/css/cms.css'

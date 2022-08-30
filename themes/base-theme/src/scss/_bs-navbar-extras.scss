@@ -1,0 +1,105 @@
+// Make navbar dropdown toggle icons slightly bigger
+$navbar-drd-size: .4em; // default .3em;
+.navbar-nav .dropdown-toggle::after {
+  border-width: $navbar-drd-size;
+  border-bottom-width: 0;
+}
+
+// Pad navbar dropdown toggle icons identical to navbar-toggler on collapse
+@each $breakpoint in map-keys($grid-breakpoints) {
+  .navbar-expand-#{$breakpoint} .dropdown-toggle {
+    @include media-breakpoint-down($breakpoint) {
+      $navbar-drd-size-half: $navbar-drd-size * .5;
+      padding-left: calc(#{$navbar-toggler-padding-x} + .75em - #{$navbar-drd-size-half});
+      padding-right: calc(#{$navbar-toggler-padding-x} + .75em - #{$navbar-drd-size-half});
+    }
+  }
+}
+
+// Alter navbar dropdown icons on .show
+.navbar-nav .dropdown-toggle.show:after {
+  transform: scaleY(-1);
+}
+
+// .nav-link-colors (apply colors, not layout), eg for combined link & dropdown
+.navbar-nav {
+  .nav-link-within-dropdown {
+    text-decoration: if($link-decoration == none, null, none);
+
+    &:hover,
+    &:focus {
+      text-decoration: if($link-hover-decoration == underline, none, null);
+    }
+
+    &.dropdown-toggle {
+      float: right;
+    }
+  }
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+  .navbar-expand-#{$breakpoint} {
+    @include media-breakpoint-up($breakpoint) {
+      .nav-link-within-dropdown.dropdown-toggle {
+        float: none;
+        margin-left: .15em;
+        padding-left: .35rem;
+        padding-right: .35rem;
+        border-left: 1px solid transparent;
+      }
+      &.navbar-light .navbar-nav .nav-link:hover .nav-link-within-dropdown.dropdown-toggle {
+        border-left-color: $navbar-light-disabled-color;
+      }
+      &.navbar-dark .navbar-nav .nav-link:hover .nav-link-within-dropdown.dropdown-toggle {
+        border-left-color: $navbar-dark-disabled-color;
+      }
+    }
+  }
+}
+
+
+// Dark links against a light background .nav-link-colors (apply colors, not layout), eg for combined link & dropdown
+.navbar-light {
+  .navbar-nav {
+
+    .nav-link-within-dropdown {
+      color: $navbar-light-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-light-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-light-disabled-color;
+      }
+    }
+
+    .show > .nav-link-within-dropdown,
+    .nav-link-within-dropdown.active {
+      color: $navbar-light-active-color;
+    }
+  }
+}
+
+// White links against a dark background .nav-link-colors (apply colors, not layout), eg for combined link & dropdown
+.navbar-dark {
+  .navbar-nav {
+    .nav-link-within-dropdown {
+      color: $navbar-dark-color;
+
+      &:hover,
+      &:focus {
+        color: $navbar-dark-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
+    }
+
+    .show > .nav-link-within-dropdown,
+    .nav-link-within-dropdown.active {
+      color: $navbar-dark-active-color;
+    }
+  }
+}

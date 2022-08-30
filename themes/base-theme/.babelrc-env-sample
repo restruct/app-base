@@ -1,0 +1,14 @@
+{
+  "presets": [
+      [
+          "@babel/preset-env",
+          {
+              modules: false,
+              forceAllTransforms: true,
+              targets: {
+                  browsers: ['> 2%'],
+              },
+          }
+      ]
+  ]
+}
