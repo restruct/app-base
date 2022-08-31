@@ -4,4 +4,4 @@ After: framework/routes#coreroutes
 ---
 SilverStripe\Control\Director:
   rules:
-    'search//$Action/$ID/$Name': 'Restruct\AppBase\Controllers\SiteSearchController'
+    'search//$Action/$ID/$Name': 'SiteSearchController'

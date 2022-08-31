@@ -24,6 +24,7 @@ Most html sections are wrapped in a common structure:
 ```
 
 ## Notes:
+- app/ (project classes) are not namespaced as imo thats simply unnecessary/no use
 - Default 'protected assets' folder is moved from /public/.protected/ to /restricted_assets/ (outside public webroot)
 - Yarn unmet peer depencency warnings: https://stackoverflow.com/questions/46928390/#48767033
 

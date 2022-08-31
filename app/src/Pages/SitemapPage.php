@@ -3,7 +3,6 @@
 /**
  * Copied from bigfork/silverstripe-recipe
  */
-namespace Restruct\AppBase\Pages;
 
 use Page;
 use SilverStripe\View\TemplateGlobalProvider;

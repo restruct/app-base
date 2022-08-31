@@ -40,7 +40,7 @@ Basically 'before' & 'after' are column subnavs, they precede/follow the content
                             Append a few legacy content items
                             --%>
                             <% if $ClassName.ShortName=='SitemapPage' %>
-                            <% include Restruct\AppBase\Includes\SitemapPageList Items=$Menu(1), TopLevel=1 %>
+                            <% include SitemapPageList Items=$Menu(1), TopLevel=1 %>
                             <% end_if %>
 
                             <%-- ACTUAL BLOCKS --%>
