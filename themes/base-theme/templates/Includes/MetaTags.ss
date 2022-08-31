@@ -39,41 +39,14 @@ $MetaTags(false)
 <% end_with %>
 <% end_if %>
 
-<%-- @TODO: opengraph --%>
-<%--
-<meta property="og:title" content="<% if $MetaTitle %>{$MetaTitle.XML}<% else %>{$Title.XML} | {$SiteConfig.Title}<% end_if %>" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="{$AbsoluteBaseURL}<% if $Extension=='svg' %>$URL<% else %>$FillMax(144,144).URL<% end_if %>" />
-<meta property="og:url" content="{$AbsoluteLink}" />
-<meta property="og:description" content="<% if $MetaDescription %>{$MetaDescription}<% else %>{$SiteConfig.Tagline}<% end_if %>" />
-<meta property="og:site_name" content="{$SiteConfig.Title}" />
-<meta property="og:locale" content="{$ContentLocale}" />
+<%-- SEO STUFF @TODO: replace with updated LiveSEO module --%>
+<link rel="canonical" href="<% if $CanonicalPageID %>$CanonicalPage.AbsoluteLink<% else %>$AbsoluteLink<% end_if %>" />
+<meta property="og:locale" content="$ContentLocale"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="<% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %>" />
+<meta property="og:description" content="$MetaDescription" />
+<meta property="og:url" content="$AbsoluteLink"/>
+<meta property="og:site_name" content="$SiteConfig.Title - $SiteConfig.Tagline"/>
+<meta property="article:published_time" content="$Created.Rfc3339" />
+<meta property="article:modified_time" content="$LastEdited.Rfc3339" />
 
-<meta name="twitter:title" content="<% if $MetaTitle %>{$MetaTitle.XML}<% else %>{$Title.XML} | {$SiteConfig.Title}<% end_if %>" />
-<meta name="twitter:description" content="<% if $MetaDescription %>{$MetaDescription}<% else %>{$SiteConfig.Tagline}<% end_if %>" />
-
-
-
-<meta name="apple-mobile-web-app-title" content="funda">
-<meta name="application-name" content="funda">
-<meta name="msapplication-config" content="https://assets.fstatic.nl/master_3930/assets/browserconfig.xml">
-
-<meta property="og:site_name" content="funda">
-<meta property="og:url" content="https://www.funda.nl/koop/verkocht/leiden/huis-42797899-lijsterstraat-1/">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Verkocht: Lijsterstraat 1 2333 XV Leiden [funda]">
-<meta property="og:description" content="Lijsterstraat 1 , Leiden
-Wonen in de zeer geliefde Vogelwijk in mooie groene omgeving. Op deze mooie plek ligt deze 6 kamer hoekwoning met zeer riante voor- en achtertuin (circa 15 meter!), waar je de gehele dag kunt genieten van de zon en rust. ">
-<meta property="og:image" content="https://cloud.funda.nl/valentina_media/157/965/644_1440.jpg">
-<meta property="og:image:width" content="1440">
-<meta property="og:image:height" content="960">
-
-<meta property="twitter:site" content="@funda">
-<meta property="twitter:card" content="summary_large_image">
-
-<meta itemprop="url" content="https://www.funda.nl/koop/verkocht/leiden/huis-42797899-lijsterstraat-1/">
-<meta itemprop="name" content="Verkocht: Lijsterstraat 1 2333 XV Leiden [funda]">
-<meta itemprop="description" content="Lijsterstraat 1 , Leiden
-Wonen in de zeer geliefde Vogelwijk in mooie groene omgeving. Op deze mooie plek ligt deze 6 kamer hoekwoning met zeer riante voor- en achtertuin (circa 15 meter!), waar je de gehele dag kunt genieten van de zon en rust. ">
-<meta itemprop="image" content="https://cloud.funda.nl/valentina_media/157/965/644_1440.jpg">
---%>

@@ -1,5 +1,4 @@
 <%-- NOTE: Regular & Blocks-based (aka Elemental) rendering structure:
-
 SUBNAV, options: before, after, below
 Basically 'before' & 'after' are column subnavs, they precede/follow the content area/.blocks-container (which becomes smaller)
 'below' instead wraps the subnav in its own 'block', leaving the preceding blocks basically full width
@@ -14,12 +13,12 @@ Basically 'before' & 'after' are column subnavs, they precede/follow the content
 </div>
 <% end_if %>
 
-<div class="blocks-container blocks-count-{$ElementalArea.Elements.count} blocks-container-subnav-slot-$SiteConfig.ThemeSubNavSlot subnav-slot-$SiteConfig.ThemeSubNavSlot">
+<div class="blocks-container subnav-slot-$SiteConfig.ThemeSubNavSlot <% if $ElementalAreaID %>blocks-count-{$ElementalArea.Elements.count}<% else %>no-blocks-module<% end_if %>">
 
     <% if $SiteConfig.ThemeSubNavSlot=='before' || $SiteConfig.ThemeSubNavSlot=='after' %>
     <%-- TWO COLUMN LAYOUT (NAV & CONTENT) --%>
 
-        <div class="<% include BlockHolderClasses %>">
+        <div class="<% if $ElementalAreaID %><% include BlockHolderClasses %><% end_if %>">
             <div class="block-item-wrapper">
                 <div class="$SiteConfig.ContainerClass">
                     <div class="row">
@@ -59,7 +58,7 @@ Basically 'before' & 'after' are column subnavs, they precede/follow the content
     <% else %>
     <%-- FULLWIDTH/STACKED BLOCKS LAYOUT --%>
 
-        <div class="<% include BlockHolderClasses %>">
+        <div class="<% if $ElementalAreaID %><% include BlockHolderClasses %><% end_if %>">
             <div class="block-item-wrapper">
                 <div class="$SiteConfig.ContainerClass">
                     <div class="row">
@@ -88,7 +87,7 @@ Basically 'before' & 'after' are column subnavs, they precede/follow the content
         Option: append content items as pseudo-blocks if they're not available as actual blocks
         --%>
 <%--        <% if $ClassName.ShortName=='SitemapPage' %>--%>
-<%--            <div class="<% include BlockHolderClasses %> sitemap-block">--%>
+<%--            <div class="<% if $ElementalAreaID %><% include BlockHolderClasses %><% end_if %> sitemap-block">--%>
 <%--                <div class="block-item-wrapper">--%>
 <%--                    <div class="$SiteConfig.ContainerClass">--%>
 <%--                        <div class="row">--%>
@@ -110,7 +109,7 @@ Basically 'before' & 'after' are column subnavs, they precede/follow the content
 
         <%-- SUBNAV BELOW --%>
         <% if $SiteConfig.ThemeSubNavSlot=='below' %>
-            <div class="<% include BlockHolderClasses %> subnav-block">
+            <div class="<% if $ElementalAreaID %><% include BlockHolderClasses %><% end_if %> subnav-block">
                 <div class="block-item-wrapper">
                     <div class="$SiteConfig.ContainerClass">
                         <div class="row">
