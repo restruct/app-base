@@ -4,7 +4,6 @@
  * Copied from bigfork/silverstripe-recipe
  */
 
-use Page;
 use SilverStripe\View\TemplateGlobalProvider;
 
 class SitemapPage

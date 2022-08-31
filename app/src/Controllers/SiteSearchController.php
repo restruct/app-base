@@ -4,7 +4,6 @@
  * Facilitates updating searchresults (eg custom DataObjects or Elemental/Blocks)
  */
 
-use PageController;
 use SilverStripe\CMS\Controllers\ContentController;
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\CMS\Search\ContentControllerSearchExtension;

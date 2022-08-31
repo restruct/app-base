@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c41ed1afd99a695fe686b8767d6e228",
+    "content-hash": "ea164e56e5a3860574d7bc3e35dfe6bf",
     "packages": [
         {
             "name": "bigfork/silverstripe-simpleseo",
